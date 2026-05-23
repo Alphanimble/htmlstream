@@ -6,9 +6,13 @@ AI models excel at writing HTML. It's more expressive than markdown: metric dash
 
 ## Demo
 
-Screen recording of the included chat demo (`npm run chat`) streaming a live OpenRouter response as HTML:
+Screen recording of the included chat demo (`npm run chat`) streaming a live OpenRouter response as HTML.
 
-<div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/j21ang?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+GitHub READMEs do not render `<iframe>` or `<video>` embeds ([sanitized HTML only](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#html)). Use the thumbnail below — **click to watch** on Streamable:
+
+[![Watch the StreamHtml demo on Streamable](https://cdn-cf-east.streamable.com/image/j21ang.jpg)](https://streamable.com/j21ang)
+
+Direct link: [streamable.com/j21ang](https://streamable.com/j21ang)
 
 What you're seeing in the recording:
 
