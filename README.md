@@ -10,9 +10,9 @@ Screen recording of the included chat demo (`npm run chat`) streaming a live Ope
 
 GitHub READMEs do not render `<iframe>` or `<video>` embeds ([sanitized HTML only](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#html)). Use the thumbnail below — **click to watch** on Streamable:
 
-[![Watch the StreamHtml demo on Streamable](https://cdn-cf-east.streamable.com/image/j21ang.jpg)](https://streamable.com/j21ang)
+[![Watch the StreamHtml demo on Streamable](https://cdn-cf-east.streamable.com/image/fxnzq6.jpg)](https://streamable.com/fxnzq6)
 
-Direct link: [streamable.com/j21ang](https://streamable.com/j21ang)
+Direct link: [streamable.com/fxnzq6](https://streamable.com/fxnzq6)
 
 What you're seeing in the recording:
 
