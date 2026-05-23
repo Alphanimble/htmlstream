@@ -39,20 +39,20 @@ What you're seeing in the recording:
 ## Install
 
 ```bash
-npm install streamhtml
+npm install @alphanimble/streamhtml
 ```
 
 Requires **React 18+** (and `react-dom` in browser apps). Import the base styles once:
 
 ```tsx
-import "streamhtml/styles.css";
+import "@alphanimble/streamhtml/styles.css";
 ```
 
 ## Quick start
 
 ```tsx
-import { StreamHtml } from "streamhtml";
-import "streamhtml/styles.css";
+import { StreamHtml } from "@alphanimble/streamhtml";
+import "@alphanimble/streamhtml/styles.css";
 
 function Message({ content, isStreaming }: { content: string; isStreaming: boolean }) {
   return (
@@ -79,8 +79,8 @@ function Message({ content, isStreaming }: { content: string; isStreaming: boole
 
 ```tsx
 import { useChat } from "@ai-sdk/react";
-import { StreamHtml } from "streamhtml";
-import "streamhtml/styles.css";
+import { StreamHtml } from "@alphanimble/streamhtml";
+import "@alphanimble/streamhtml/styles.css";
 
 export function Chat() {
   const { messages, status } = useChat();
@@ -148,7 +148,7 @@ Streaming input          Repair                 Render
 Headless repair function for non-React use:
 
 ```ts
-import { rehtml } from "streamhtml";
+import { rehtml } from "@alphanimble/streamhtml";
 
 const { html, stable, live, hadIncompleteTag } = rehtml(partialHtml);
 ```
@@ -156,7 +156,7 @@ const { html, stable, live, hadIncompleteTag } = rehtml(partialHtml);
 ### `sanitizeHtml(html, config?)`
 
 ```ts
-import { sanitizeHtml, configureSanitizer } from "streamhtml";
+import { sanitizeHtml, configureSanitizer } from "@alphanimble/streamhtml";
 
 configureSanitizer({ ALLOWED_TAGS: ["div", "p", "span", "table", ...] });
 const safe = sanitizeHtml(untrustedHtml);
@@ -186,7 +186,7 @@ Define component styles in your app — StreamHtml ships minimal base styles for
 
 ```bash
 git clone <your-repo-url>
-cd streamhtml
+cd htmlstream
 npm install
 npm test
 npm run build

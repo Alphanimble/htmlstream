@@ -1,5 +1,5 @@
 {
-  "name": "streamhtml",
+  "name": "@alphanimble/streamhtml",
   "version": "0.1.0",
   "description": "A streaming-optimized HTML renderer for AI responses — handles incomplete HTML gracefully",
   "type": "module",
@@ -58,6 +58,9 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
