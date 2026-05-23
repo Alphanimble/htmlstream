@@ -4,6 +4,12 @@ A streaming-optimized HTML renderer for AI responses — the HTML counterpart to
 
 AI models excel at writing HTML. It's more expressive than markdown: metric dashboards, comparison grids, styled diffs, rich tables, badges, and custom layouts — all in one stream. **StreamHtml** renders that HTML safely while it streams, handling incomplete tags gracefully.
 
+## Install
+
+```bash
+npm install @alphanimble/streamhtml
+```
+
 ## Demo
 
 Screen recording of the included chat demo (`npm run chat`) streaming a live OpenRouter response as HTML.
@@ -35,12 +41,6 @@ What you're seeing in the recording:
 - **Drop-in React component** — Works with AI SDK, any chat UI, or plain streaming text
 - **Headless core** — Use `rehtml()` without React for Node or other frameworks
 - **Raw-text aware** — Respects `<pre>`, `<code>`, etc. where `<` is literal
-
-## Install
-
-```bash
-npm install @alphanimble/streamhtml
-```
 
 Requires **React 18+** (and `react-dom` in browser apps). Import the base styles once:
 
