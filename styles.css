@@ -1,0 +1,272 @@
+/* StreamHtml — base styles for streaming HTML renderer */
+
+.sh-root {
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.sh-streaming {
+  overflow-anchor: none;
+}
+
+.sh-block {
+  contain: layout style;
+}
+
+.sh-stable {
+  animation: sh-fade-in 0.15s ease forwards;
+}
+
+.sh-streaming .sh-stable {
+  animation: none;
+}
+
+.sh-streaming .sh-live-active {
+  position: relative;
+  overflow-anchor: none;
+}
+
+/* New streamed text — fade up from half-visible. */
+.sh-streaming .sh-stream-chunk {
+  display: inline;
+  animation: sh-stream-chunk-in 220ms ease-out both;
+}
+
+@keyframes sh-stream-chunk-in {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sh-streaming .sh-stream-chunk {
+    animation: none;
+  }
+}
+
+.sh-streaming [data-latex]:empty,
+.sh-streaming [data-katex-placeholder] {
+  display: inline-block;
+  min-width: 2em;
+}
+
+.sh-streaming .math-block[data-latex]:empty,
+.sh-streaming .math-block[data-katex-placeholder] {
+  display: block;
+  min-height: 2.75em;
+}
+
+@keyframes sh-fade-in {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sh-caret {
+  display: inline-block;
+  width: 0.55em;
+  min-width: 8px;
+  height: 1em;
+  background: currentColor;
+  border-radius: 2px;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  animation: sh-caret-blink 1.1s ease-in-out infinite;
+  overflow-anchor: none;
+}
+
+.sh-caret.sh-caret-float {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  z-index: 2;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.sh-caret.sh-caret-hidden {
+  visibility: hidden;
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes sh-caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.sh-streaming .sh-live {
+  min-height: 1em;
+  overflow-anchor: none;
+}
+
+.sh-thinking {
+  margin-bottom: 0.85em;
+  border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 0.625em;
+  background: color-mix(in srgb, currentColor 4%, transparent);
+  overflow: hidden;
+}
+
+.sh-thinking summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.55em 0.75em;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  border-bottom: 1px solid transparent;
+}
+
+.sh-thinking[open] summary {
+  border-bottom-color: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.sh-thinking summary::-webkit-details-marker {
+  display: none;
+}
+
+.sh-thinking-body {
+  margin: 0;
+  padding: 0.65em 0.75em 0.8em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8em;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  opacity: 0.88;
+  max-height: 18em;
+  overflow-y: auto;
+  background: none;
+  border-radius: 0;
+}
+
+.sh-reasoning-pending {
+  font-size: 0.85em;
+  opacity: 0.55;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.sh-streaming table,
+.sh-live table {
+  table-layout: fixed;
+  width: 100%;
+  overflow-anchor: none;
+}
+
+.sh-streaming .sh-live tr[data-sh-partial] {
+  opacity: 0.85;
+}
+
+.sh-root table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.925em;
+  margin: 0.75em 0;
+}
+
+.sh-root th,
+.sh-root td {
+  padding: 0.5em 0.75em;
+  text-align: left;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.sh-root th {
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.sh-root code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25em;
+}
+
+.sh-root pre {
+  overflow-x: auto;
+  padding: 0.75em 1em;
+  border-radius: 0.5em;
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  margin: 0.75em 0;
+}
+
+.sh-root pre code {
+  background: none;
+  padding: 0;
+}
+
+.sh-root blockquote {
+  margin: 0.75em 0;
+  padding-left: 1em;
+  border-left: 3px solid color-mix(in srgb, currentColor 25%, transparent);
+  opacity: 0.9;
+}
+
+.sh-root img,
+.sh-root video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375em;
+}
+
+.sh-root a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sh-root ul,
+.sh-root ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.sh-root h1,
+.sh-root h2,
+.sh-root h3,
+.sh-root h4,
+.sh-root h5,
+.sh-root h6 {
+  margin: 1em 0 0.5em;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.sh-root h1:first-child,
+.sh-root h2:first-child,
+.sh-root h3:first-child,
+.sh-root p:first-child {
+  margin-top: 0;
+}
+
+.sh-root p {
+  margin: 0.5em 0;
+}
+
+.sh-root hr {
+  border: none;
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  margin: 1em 0;
+}

@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+demo/node_modules/
+
+# Build output
+dist/
+demo/dist/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local dev artifacts
+.chat-sessions/
+*.log
+.DS_Store
+
+# Vite cache
+.vite/
+demo/.vite/
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+
+# Large local media (not part of the library)
+*.mp4
+
+# Test coverage
+coverage/
