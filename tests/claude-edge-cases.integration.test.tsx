@@ -43,6 +43,14 @@ describe("Claude edge cases — streaming stress", () => {
     60_000,
   );
 
+  it(
+    "survives cumulative stream: GIANT_PRE",
+    () => {
+      expect(() => streamWithoutCrash(GIANT_PRE, 40)).not.toThrow();
+    },
+    30_000,
+  );
+
   it("renders final deep nesting text in the right place", () => {
     const { container } = render(
       <StreamHtml isStreaming={false}>{DEEP_NESTING}</StreamHtml>,

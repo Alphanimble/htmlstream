@@ -27,5 +27,8 @@ demo/.vite/
 *.swo
 Thumbs.db
 
+# Local media (host demos externally)
+*.mp4
+
 # Test coverage
 coverage/

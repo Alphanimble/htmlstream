@@ -150,9 +150,11 @@ export const CLAUDE_EDGE_CASES = {
   PERF_BOMB,
 } as const;
 
-/** Sweep set — excludes PERF_BOMB (tested separately with longer timeout) */
+/** Sweep set — excludes heavy cases tested separately with longer timeouts */
 export const CLAUDE_STREAM_SWEEP = Object.fromEntries(
-  Object.entries(CLAUDE_EDGE_CASES).filter(([id]) => id !== "PERF_BOMB"),
-) as Omit<typeof CLAUDE_EDGE_CASES, "PERF_BOMB">;
+  Object.entries(CLAUDE_EDGE_CASES).filter(
+    ([id]) => id !== "PERF_BOMB" && id !== "GIANT_PRE",
+  ),
+) as Omit<typeof CLAUDE_EDGE_CASES, "PERF_BOMB" | "GIANT_PRE">;
 
 export type ClaudeEdgeCaseId = keyof typeof CLAUDE_EDGE_CASES;

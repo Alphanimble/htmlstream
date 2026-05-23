@@ -8,9 +8,7 @@ AI models excel at writing HTML. It's more expressive than markdown: metric dash
 
 Screen recording of the included chat demo (`npm run chat`) streaming a live OpenRouter response as HTML:
 
-<video src="https://github.com/Alphanimble/htmlstream/raw/main/htmlstream.mp4" controls width="100%">
-  <a href="https://github.com/Alphanimble/htmlstream/raw/main/htmlstream.mp4">Watch the StreamHtml demo video</a>
-</video>
+<div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/j21ang?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
 What you're seeing in the recording:
 
@@ -21,8 +19,6 @@ What you're seeing in the recording:
 - **Text fade-in** — each new chunk of streamed text fades from half-opacity to full
 - **Stable blocks** — completed sections freeze so earlier content doesn't re-render during the stream
 - **Sanitized output** — DOMPurify strips unsafe markup before anything hits the DOM
-
-Local file: [`htmlstream.mp4`](./htmlstream.mp4) (recorded from the OpenRouter chat demo in this repo).
 
 ## Features
 
