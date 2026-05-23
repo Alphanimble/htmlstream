@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "description": "A streaming-optimized HTML renderer for AI responses — handles incomplete HTML gracefully",
   "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./styles.css": "./styles.css"
   },
@@ -22,6 +26,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "prepublishOnly": "npm run build && npm test",
     "test": "vitest run",
     "test:watch": "vitest",
     "demo": "vite --config demo/vite.config.ts",
@@ -37,12 +42,22 @@
     "llm",
     "chat",
     "dompurify",
-    "xss"
+    "xss",
+    "streamdown",
+    "markdown-alternative"
   ],
   "license": "MIT",
+  "author": "Alphanimble",
+  "homepage": "https://github.com/Alphanimble/htmlstream#readme",
+  "bugs": {
+    "url": "https://github.com/Alphanimble/htmlstream/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alphanimble/htmlstream.git"
+    "url": "git+https://github.com/Alphanimble/htmlstream.git"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

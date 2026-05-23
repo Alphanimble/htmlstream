@@ -42,6 +42,12 @@ What you're seeing in the recording:
 npm install streamhtml
 ```
 
+Requires **React 18+** (and `react-dom` in browser apps). Import the base styles once:
+
+```tsx
+import "streamhtml/styles.css";
+```
+
 ## Quick start
 
 ```tsx
