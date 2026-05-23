@@ -4,6 +4,26 @@ A streaming-optimized HTML renderer for AI responses — the HTML counterpart to
 
 AI models excel at writing HTML. It's more expressive than markdown: metric dashboards, comparison grids, styled diffs, rich tables, badges, and custom layouts — all in one stream. **StreamHtml** renders that HTML safely while it streams, handling incomplete tags gracefully.
 
+## Demo
+
+Screen recording of the included chat demo (`npm run chat`) streaming a live OpenRouter response as HTML:
+
+<video src="https://github.com/Alphanimble/htmlstream/raw/main/htmlstream.mp4" controls width="100%">
+  <a href="https://github.com/Alphanimble/htmlstream/raw/main/htmlstream.mp4">Watch the StreamHtml demo video</a>
+</video>
+
+What you're seeing in the recording:
+
+- **Incremental HTML repair** — incomplete tags and unclosed elements are handled as tokens arrive, without layout jumps
+- **Live DOM patching** — text and table rows append in place instead of replacing the whole message on every chunk
+- **Reasoning panel** — model thinking tokens stream in a collapsible block before HTML content starts
+- **Streaming caret** — a smooth block cursor tracks the active text insertion point (only while characters are landing)
+- **Text fade-in** — each new chunk of streamed text fades from half-opacity to full
+- **Stable blocks** — completed sections freeze so earlier content doesn't re-render during the stream
+- **Sanitized output** — DOMPurify strips unsafe markup before anything hits the DOM
+
+Local file: [`htmlstream.mp4`](./htmlstream.mp4) (recorded from the OpenRouter chat demo in this repo).
+
 ## Features
 
 - **Streaming-first** — Strips incomplete tags, auto-closes open elements, splits stable/live blocks

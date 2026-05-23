@@ -27,8 +27,5 @@ demo/.vite/
 *.swo
 Thumbs.db
 
-# Large local media (not part of the library)
-*.mp4
-
 # Test coverage
 coverage/
